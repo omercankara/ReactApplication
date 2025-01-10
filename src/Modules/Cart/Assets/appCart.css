@@ -1,0 +1,154 @@
+/* Genel stil */
+.cart-container {
+  padding: 30px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fafafa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Kart öğesi düzeni */
+.cart-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Görsel kapsayıcı */
+.img-container {
+  flex: 1;
+  max-width: 200px;
+  padding: 10px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Ürün detayları */
+.item-details {
+  flex: 2;
+  padding: 10px;
+}
+
+.item-details h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.item-details p {
+  font-size: 17px;
+  color: #555;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: space-between; /* Orta hizalama için */
+  width: 10%;
+}
+
+.quantity-controls button {
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 30%;
+  color: black;
+  font-weight: bold;
+}
+
+.quantity-controls button:hover {
+  background-color: #ddd;
+}
+
+.quantity-controls span {
+  margin: 0 10px;
+  color: black;
+}
+
+.remove-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 20%;
+}
+
+.remove-btn:hover {
+  background-color: #e60000;
+}
+
+.total {
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img-container {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .item-details {
+    text-align: center;
+  }
+
+  .quantity-controls {
+    justify-content: center; /* Butonları ortalar */
+  }
+
+  .remove-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: space-between; /* Orta hizalama için */
+    width: 100%;
+  }
+  .quantity-controls button {
+    padding: 5px 8px;
+  }
+
+  .item-details h3 {
+    font-size: 16px;
+  }
+
+  .item-details p {
+    font-size: 12px;
+  }
+
+  .total h3 {
+    font-size: 18px;
+  }
+}

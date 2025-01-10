@@ -1,0 +1,91 @@
+/* .card-container: Kartları saran konteyner */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+/* .card: Kartlar için stil */
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin: 16px;
+  background-color: #fff;
+  flex: 1 1 calc(25% - 32px); /* 1024px ve üstü için her satırda 4 kart (her bir kartın genişliği %25) */
+  box-sizing: border-box; /* Margin ve padding'i hesaba kat */
+}
+
+/* .image: Kart içindeki görsel */
+.image {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.details {
+  padding-top: 12px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 12px;
+}
+
+.addToCartButton {
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+
+}
+
+/* 1024px ve üstü cihazlar için her satırda 4 kart */
+@media (min-width: 1024px) {
+  .card {
+    flex: 1 1 calc(25% - 32px); /* %25 genişlik, her satırda 4 kart */
+  }
+}
+
+/* 768px ile 1024px arasındaki cihazlar için her satırda 3 kart */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .card {
+    flex: 1 1 calc(33.33% - 32px); /* %33.33 genişlik, her satırda 3 kart */
+  }
+}
+
+/* 768px ve altındaki cihazlar için her satırda 2 kart */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 32px); /* %50 genişlik, her satırda 2 kart */
+  }
+}
+
+/* 480px ve altındaki cihazlar için her satırda 1 kart */
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%; /* %100 genişlik, her satırda 1 kart */
+  }
+}

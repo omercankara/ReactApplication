@@ -1,0 +1,60 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-menu {
+  display: flex;
+  justify-content: space-between; 
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.left-menu ul, .right-menu ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.left-menu li, .right-menu li {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.right-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  position: relative; 
+}
+
+.account-menu {
+  position: absolute;
+  top: 100%; 
+  right: 0; 
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.account-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; 
+}
+
+.account-menu li {
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.account-menu li:hover {
+  background-color: #f0f0f0;
+}

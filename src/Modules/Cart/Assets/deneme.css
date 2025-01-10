@@ -1,0 +1,57 @@
+.shoppingContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: #f4f4f9;
+}
+
+.content {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.orderContent {
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Küçük ekranlarda .content'i en alta sabitle ve genişliği %100 yap */
+@media (max-width: 768px) {
+    .shoppingContainer {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        background-color: #f4f4f9;
+    }
+
+    .content {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .orderContent {
+        flex-direction: column !important;
+        /* İçeriği dikey hizala */
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100% !important;
+        height: 80px !important;
+        /* Sabit yükseklik belirleyin */
+        position: fixed !important;
+        bottom: 0 !important;
+        /* Ekranın alt kısmına sabitle */
+        left: 0 !important;
+        background-color: white;
+
+    }
+}

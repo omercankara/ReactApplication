@@ -1,0 +1,119 @@
+/* orders-container: Sipariş sayfasının genel kapsayıcısı */
+.orders-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #f9f9f9; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .orders-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  
+  .no-orders {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 20px;
+  }
+  
+  /* Sipariş listesinin kapsayıcısı */
+  .orders-list {
+    margin-top: 20px;
+  }
+  
+  /* Siparişleri listeleyen UL elemanı */
+  .orders-list-ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .order-item {
+    background-color: #fff; 
+    margin: 15px 0; 
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row; 
+    border-left: 5px solid #4CAF50; 
+  }
+  
+  .order-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .order-image {
+    margin-right: 15px;
+  }
+  
+  .order-img {
+    width: 100px; 
+    height: 100px;
+    object-fit: cover; 
+    border-radius: 5px;
+  }
+  
+  .order-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .order-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .order-date,
+  .order-quantity,
+  .order-price {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .order-price {
+    color: #4CAF50; 
+  }
+  
+  /* Daha küçük ekranlarda (mobil uyumlu) */
+  @media (max-width: 768px) {
+    .orders-container {
+      padding: 15px;
+    }
+  
+    .orders-title {
+      font-size: 1.6rem;
+    }
+  
+    .order-item {
+      flex-direction: column; 
+      padding: 10px;
+    }
+  
+    .order-img {
+      width: 80px; 
+      height: 80px;
+    }
+  
+    .order-name {
+      font-size: 1.2rem;
+    }
+  
+    .order-date,
+    .order-quantity,
+    .order-price {
+      font-size: 0.9rem;
+    }
+  }
+  
