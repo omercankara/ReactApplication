@@ -1,6 +1,3 @@
-Mikro Frontend Dökümantasyonu
-Bu dökümantasyon, uygulamanızda mikro frontend yaklaşımını benimseyerek modüler, bağımsız geliştirme ve dağıtım süreçlerini mümkün kılmak amacıyla hazırlanmıştır. Mikro frontend, her bir özelliğin bağımsız bir birim (modül) olarak geliştirildiği ve farklı ekiplerin farklı modüller üzerinde paralel çalışabileceği bir mimaridir. Burada verilen yapı, mikro frontend yaklaşımına dayalı bir proje mimarisi örneği sunmaktadır.
-
 1. Proje Yapısı
 Projenin kök yapısında src dizini altında çeşitli alt klasörler bulunur. Her bir modül kendi bağımsız bileşenlerini, iş mantığını ve servisini içerir. redux klasörü uygulamanın küresel durum yönetimini içerir ve tüm modüller arasında paylaşılan veriler bu yapı üzerinden yönetilir. Ayrıca Services dizini, uygulamanın dış API'leri ile entegrasyon sağlar.
 
@@ -39,8 +36,7 @@ my-app
     │   ├── authApi.tsx        # Kimlik doğrulama API servisleri
     │   ├── productApi.tsx     # Ürün API servisleri
     ├── App.tsx                # Ana uygulama bileşeni
-2. Mikro Frontend Modülleri
-Projenizde her bir ana modül, belirli bir işlevselliği yerine getiren bağımsız bir yapı olarak tasarlanmıştır  Her modül, bağımsız olarak çalışan ve tüm uygulamaya entegre olan birimlerdir.
+
 
 Modüllerin İçeriği:
 Auth Modülü: Kullanıcı giriş, kayıt ve kimlik doğrulama işlemlerini yönetir.
